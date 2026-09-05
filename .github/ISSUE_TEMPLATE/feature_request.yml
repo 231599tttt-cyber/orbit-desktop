@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a focused improvement to Orbit Desktop
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform scope
+      options:
+        - Shared core / UI
+        - Windows
+        - macOS (future adapter)
+        - Linux (future)
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Performance, privacy, or compatibility trade-offs

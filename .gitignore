@@ -1,0 +1,25 @@
+node_modules/
+dist/
+release/
+*.tsbuildinfo
+.vite/
+
+# Automated test output
+test-results/
+playwright-report/
+blob-report/
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+
+# OS, editor, and graphics-driver artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+%SystemDrive%/
+NVIDIA Corporation/

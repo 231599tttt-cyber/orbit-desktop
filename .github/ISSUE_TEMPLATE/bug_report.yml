@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a reproducible Orbit Desktop problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove usernames, local paths, and application lists from screenshots or logs before attaching them.
+  - type: input
+    id: version
+    attributes:
+      label: Orbit Desktop version or commit
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - 3D interaction or performance
+        - Application scan or icon
+        - Application launch
+        - Global shortcut or window
+        - Settings or translation
+        - Packaging or installation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest repeatable sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private paths, application lists, tokens, and other sensitive data.
+          required: true

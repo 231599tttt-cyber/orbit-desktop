@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  windows-installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:unit
+      - run: npm run typecheck
+      - name: Build Windows installer
+        run: npm run package:win
+        env:
+          VITE_ORBIT_REPOSITORY_URL: https://github.com/${{ github.repository }}
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbit-desktop-windows-${{ github.ref_name }}
+          path: |
+            release/*-Setup.exe
+            release/*.blockmap
+          if-no-files-found: error
+      - name: Publish GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $installer = Get-ChildItem -LiteralPath release -Filter '*-Setup.exe' | Select-Object -First 1 -ExpandProperty FullName
+          $blockmap = Get-ChildItem -LiteralPath release -Filter '*.blockmap' | Select-Object -First 1 -ExpandProperty FullName
+          if (-not $installer) { throw 'Windows installer was not produced.' }
+          $assets = @($installer)
+          if ($blockmap) { $assets += $blockmap }
+          gh release create $env:GITHUB_REF_NAME @assets --verify-tag --generate-notes --title "Orbit Desktop $env:GITHUB_REF_NAME"
