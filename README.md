@@ -227,19 +227,6 @@ Electron 渲染进程启用 `contextIsolation` 和沙箱，关闭 Node.js 集成
 - [ ] 补充路线图和首批 `good first issue`
 - [ ] 发布 `v0.1.0` Release Notes，明确实验功能与已知限制
 
-## Codex open source fund 申请准备
-
-OpenAI 的官方 [Codex open source fund 申请页](https://openai.com/form/codex-open-source-fund/) 说明：该计划以 100 万美元规模支持开源项目使用 Codex CLI 和 OpenAI 模型，持续审核申请，单个项目最高可获得 25,000 美元 API credits。表单会询问个人 GitHub、项目名称与简介、GitHub 仓库、协作者，以及 API credits 的具体用途。
-
-提交 Orbit Desktop 前建议准备：
-
-1. 一个公开、可克隆、许可证清晰的 GitHub 仓库。
-2. 可复现的 Windows MVP：安装说明、演示 GIF/视频、自动化测试和已知限制。
-3. 简洁的项目说明：Orbit Desktop 解决什么问题、为什么采用空间 3D 交互、为何适合开放协作。
-4. 可核验的当前进展：真实扫描、用户确认、图标缓存、启动、快捷键、i18n 和安全边界。
-5. 诚实且具体的 credits 使用计划，例如用于开源开发过程中的跨平台适配、可访问性、测试生成与质量评估；不要把尚未实现的 AI 能力写成现有产品功能。
-
-Orbit Desktop 当前产品运行时没有接入 AI。申请计划和未来研究方向应与实际路线图一致；是否获得资助由 OpenAI 审核决定，本仓库与 OpenAI 不存在官方隶属或背书关系。
 
 ## 参与贡献
 
