@@ -14,7 +14,7 @@
     "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on tcp:5173 && electron .\"",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "package:win": "npm run build && electron-builder --win nsis",
+    "package:win": "npm run build && electron-builder --win nsis --publish never",
     "typecheck": "tsc -b",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "playwright test --project=unit",
