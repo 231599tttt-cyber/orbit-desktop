@@ -4,6 +4,10 @@ Orbit Desktop 是一个面向 Windows 的开源 3D 应用启动器。它把真�
 
 > 当前版本：`0.1.0`，可运行的 Windows MVP。项目仍处于早期阶段，不替换 Windows Shell，也不会修改 Explorer、任务栏或系统关键注册表。
 
+## 界面预览
+
+![Orbit Desktop 3D 应用星球主界面](docs/screenshots/orbit-desktop-application-planet.png)
+
 ![Orbit Desktop Windows MVP：真实计算器节点聚焦在 3D 应用星球中央](docs/screenshots/orbit-desktop-windows.png)
 
 ## 当前能力
