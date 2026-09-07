@@ -1,7 +1,7 @@
 {
   "name": "orbit-desktop",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A spatial 3D application launcher for Windows.",
   "author": "Orbit Desktop Contributors",
   "license": "MIT",

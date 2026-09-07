@@ -2,7 +2,7 @@
 
 Orbit Desktop 是一个面向 Windows 的开源 3D 应用启动器。它把真实的本机应用组织成可旋转的空间星球：按快捷键呼出，拖动或搜索应用，聚焦后启动，再回到原来的 Windows 桌面。
 
-> 当前版本：`0.1.0`，可运行的 Windows MVP。项目仍处于早期阶段，不替换 Windows Shell，也不会修改 Explorer、任务栏或系统关键注册表。
+> 当前版本：`0.1.1`，可运行的 Windows MVP。项目仍处于早期阶段，不替换 Windows Shell，也不会修改 Explorer、任务栏或系统关键注册表。
 
 ## 界面预览
 
