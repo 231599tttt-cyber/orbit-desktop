@@ -312,14 +312,12 @@ async function launchApplication(application) {
   if (application.kind === 'shortcut') {
     const errorMessage = await shell.openPath(application.shortcutPath)
     if (errorMessage) return { ok: false, code: 'shortcut-launch-failed', message: mainText(settings.language, 'launch.failed', { name: application.name }) }
-    hideLauncher('application-launched')
     return { ok: true, code: 'launched', message: mainText(settings.language, 'launch.starting', { name: application.name }) }
   }
 
   if (application.kind === 'uwp') {
     const errorMessage = await shell.openPath(`shell:AppsFolder\\${application.aumid}`)
     if (errorMessage) return { ok: false, code: 'uwp-launch-failed', message: mainText(settings.language, 'launch.failed', { name: application.name }) }
-    hideLauncher('application-launched')
     return { ok: true, code: 'launched', message: mainText(settings.language, 'launch.starting', { name: application.name }) }
   }
 
@@ -344,7 +342,6 @@ async function launchApplication(application) {
       if (settled) return
       settled = true
       child.unref()
-      hideLauncher('application-launched')
       resolve({ ok: true, code: 'launched', message: mainText(settings.language, 'launch.starting', { name: application.name }) })
     })
     child.once('error', () => {
