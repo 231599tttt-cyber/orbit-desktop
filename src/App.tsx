@@ -26,7 +26,7 @@ import type {
 import type { OrbitSettings } from './types/settings'
 
 const REPOSITORY_URL = (import.meta.env.VITE_ORBIT_REPOSITORY_URL || '').trim()
-const ORBIT_VERSION = '0.1.0'
+const ORBIT_VERSION = '0.1.1'
 
 type StatusMessage = {
   key: TranslationKey
